@@ -6,6 +6,7 @@ const userProfileModalBody = document.getElementById("userProfileModalBody");
 const userProfileModalFooter = document.getElementById(
   "userProfileModalFooter"
 );
+//Pagination and search handler (jQuery)
 $(() => {
   $.ajax({
     url: "https://reqres.in/api/users?page=1",
@@ -13,9 +14,6 @@ $(() => {
   }).done(function (res) {
     users = res;
   });
-});
-//Pagination and search handler (jQuery)
-$(() => {
   $(".page-item").on("click", function () {
     $(".page-item").not($(this)).attr("class", "page-item");
     $(this).attr("class", "page-item active");
