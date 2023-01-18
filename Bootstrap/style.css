@@ -1,0 +1,22 @@
+body {
+  background-image: url(./images/bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+.pagination-nav {
+  margin: -30px auto 2rem auto;
+  width: min-content;
+}
+.pagination li {
+  cursor: pointer;
+}
+.w-min-60 {
+  min-width: 60rem;
+}

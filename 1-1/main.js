@@ -9,7 +9,7 @@ $(() => {
         method,
       })
         .fail(function (_res, _textStatus, xhr) {
-          alert("page not found!");
+          alert(xhr.status);
         })
         .done(function (res, _textStatus, xhr) {
           $("#response").val(JSON.stringify(res, null, 4));
