@@ -1,3 +1,3 @@
 const handleOnClickProfileBtn = (id) => {
-  window.location = `/Bootstrap/UserProfile/userProfile.html?id=${id}`;
+  window.location = `/1-2/UserProfile/userProfile.html?id=${id}`;
 };

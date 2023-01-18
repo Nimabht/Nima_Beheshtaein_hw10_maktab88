@@ -1,4 +1,3 @@
-let users = [];
 //DOM part
 const usersListContainer = document.getElementById("usersList");
 const userProfileModalTitle = document.getElementById("userProfileModalTitle");
@@ -6,14 +5,10 @@ const userProfileModalBody = document.getElementById("userProfileModalBody");
 const userProfileModalFooter = document.getElementById(
   "userProfileModalFooter"
 );
+
 //Pagination and search handler (jQuery)
 $(() => {
-  $.ajax({
-    url: "https://reqres.in/api/users?page=1",
-    method: "get",
-  }).done(function (res) {
-    users = res;
-  });
+  renderUsersList(pagination(users, 1, 6));
   $(".page-item").on("click", function () {
     $(".page-item").not($(this)).attr("class", "page-item");
     $(this).attr("class", "page-item active");
@@ -40,4 +35,3 @@ $(() => {
   });
 });
 //render user list for first time
-renderUsersList(pagination(users, 1, 6));
