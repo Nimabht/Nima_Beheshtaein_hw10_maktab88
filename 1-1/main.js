@@ -1,4 +1,15 @@
 $(() => {
+  $("#select").on("change", function () {
+    $("#request-wrapper").css("display", "none");
+    $("#response-wrapper").css("display", "none");
+    if ($("#select").val() === "get") {
+      $("#response-wrapper").css("display", "block");
+    }
+    if ($("#select").val() === "post") {
+      $("#response-wrapper").css("display", "block");
+      $("#request-wrapper").css("display", "block");
+    }
+  });
   $("form").submit((e) => {
     e.preventDefault();
     let url = $("#url-input").val();
