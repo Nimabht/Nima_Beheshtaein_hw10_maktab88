@@ -17,9 +17,9 @@ function renderModal(id) {
   $(".modal-wrapper").html(`<form id="modal">
         <div class="form-group">
           <label for="uid">UID:</label>
-          <input type="text" class="form-control" name="uid" value="${
-            selectedUser.id
-          }"/>
+          <input type="text" class="form-control" name="uid"  ${
+            status === "update" ? "disabled" : "enabled"
+          } value="${selectedUser.id}"/>
         </div>
         <div class="form-group">
           <label for="email">Email:</label>

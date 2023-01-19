@@ -7,6 +7,12 @@ function updateUser() {
     avatar: $("#modal").children()[4].children[1].value,
   };
   //validate updatedUser
+  let errorMessage = validator(updatedUser, "update");
+  if (!!errorMessage) {
+    alert(errorMessage);
+    return;
+  }
+  //validate
   let newUserData = [...users];
   let indexOfUser = users.findIndex((user) => user.id == updatedUser.id);
   newUserData[indexOfUser] = updatedUser;
